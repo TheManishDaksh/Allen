@@ -8,6 +8,7 @@ import StudyMaterials from '../components/studyMaterials';
 import Aboutus from '../components/aboutus';
 import Errorpage from '../components/errorpage';
 
+
 function App() {
   return (
     <div class = "display:flex; justify-content:space-between; flex-direction:column;">
@@ -36,8 +37,8 @@ function App() {
             <button style={{padding:"5px 15px",borderRadius:"20px",backgroundColor:'#348feb',color : 'white'}} onMouseOver={(e)=>e.currentTarget.style.backgroundColor='#3449eb'}
               onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#007bff'}>Talk to us</button>
 
-            <button style={{padding:"5px 15px",borderRadius:"20px",border:' 2px solid',color:'#348feb'}}onMouseOver={(color)=>color.currentTarget.style.backgroundColor='#c1c2c9 '}
-              onMouseOut={(color) => color.currentTarget.style.backgroundColor = 'transparent'}>Login</button>
+            <button to="/login" style={{padding:"5px 15px",borderRadius:"20px",border:' 2px solid',color:'#348feb'}}     onMouseOver={(color)=>color.currentTarget.style.backgroundColor='#c1c2c9 '}
+              onMouseOut={(color) => color.currentTarget.style.backgroundColor = 'transparent'} >Login</button>
           </div>
         </header><br />
 
@@ -51,6 +52,7 @@ function App() {
             <Route path="/studyMaterials" element={<StudyMaterials />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path='*' element={<Errorpage/>}/>
+           
           </Routes>
         </div>
       </BrowserRouter>
